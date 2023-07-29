@@ -1,0 +1,14 @@
+site:
+  title: "DreamJournalAIWebsite"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/developmentExecutable/DreamJournalAIWebsite.js"
+      api: "build/libs/DreamJournalAIWebsite.jar"
+    prod:
+      script: "build/distributions/DreamJournalAIWebsite.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
