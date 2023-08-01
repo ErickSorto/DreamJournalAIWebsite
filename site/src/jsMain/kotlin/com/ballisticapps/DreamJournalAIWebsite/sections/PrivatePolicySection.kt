@@ -96,7 +96,7 @@ fun PrivacyPolicyText() {
             ),
             Pair(
                 "Contact Us",
-                "We may use third-party service providers to perform certain tasks on our behalf, such as processing payments, providing customer support, and delivering advertisements. These service providers will have access to your personal information to perform their duties, but are not allowed to use your personal information for any other purpose."
+                "If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at DreamJournalAI@gmail.com."
             ),
         )
 
