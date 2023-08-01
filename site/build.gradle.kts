@@ -20,7 +20,7 @@ kobweb {
 
 kotlin {
     configAsKobwebApplication("DreamJournalAIWebsite", includeServer = true)
-
+    jvm { jvmToolchain(18) }
     @Suppress("UNUSED_VARIABLE") // Suppress spurious warnings about sourceset variables not being used
     sourceSets {
         val commonMain by getting {
