@@ -84,7 +84,7 @@ fun PrivacyPolicyText() {
             ),
             Pair(
                 "Service Providers",
-                "Dream Journal AI is not intended for children under the age of 13. We do not knowingly collect personal information from children under the age of 13."
+                "We may use third-party service providers to perform certain tasks on our behalf, such as processing payments, providing customer support, and delivering advertisements. These service providers will have access to your personal information to perform their duties, but are not allowed to use your personal information for any other purpose."
             ),
             Pair(
                 "Links to Other Sites",
@@ -123,4 +123,3 @@ fun SectionTitle(section: Section) {
         Text(section.title)
     }
 }
-

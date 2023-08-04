@@ -12,6 +12,7 @@ import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
+import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -30,35 +31,40 @@ import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun MainSection() {
-    Box(
+    MainSectionContent()
+    Column(
         modifier = Modifier
             .id(Section.Home.id)
-            .maxWidth(1920.px),
-        contentAlignment = Alignment.Center,
+            .maxWidth(1920.px)
+            .fillMaxHeight(),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        MainSectionContent()
         Box(
             modifier = Modifier
-                .align(Alignment.BottomEnd)
+                .padding(10.px)
+                .fillMaxWidth(),
+            contentAlignment = Alignment.TopStart
         ) {
-            PrivatePolicyLink()
+            LogoSection()
         }
-
+        Spacer()
         Box(
             modifier = Modifier
-                .align(Alignment.CenterStart)
+                .fillMaxWidth(),
+            contentAlignment = Alignment.CenterStart
         ) {
             QuoteSection(
                 quote = "Dream analysis made easy",
                 subQuote = "Dream Journal AI is a free, open-source, and privacy-focused dream journal app that uses AI to help you understand your dreams."
             )
         }
+        Spacer()
         Box(
             modifier = Modifier
-                .padding(10.px)
-                .align(Alignment.TopStart)
+                .fillMaxWidth(),
+            contentAlignment = Alignment.BottomEnd
         ) {
-            LogoSection()
+            PrivatePolicyLink()
         }
     }
 }
