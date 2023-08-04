@@ -79,7 +79,8 @@ val SectionTitleStyle by ComponentStyle {
 val PrivacyPolicyDescriptionStyle by ComponentStyle {
     base {
         Modifier
-            .margin(topBottom = 25.px)
+            .margin(top = (-25).px) // Added top padding
+            .margin(bottom = 25.px)
             .maxWidth(500.px)
             .fontFamily(FONT_FAMILY)
             .fontSize(18.px)
@@ -103,7 +104,6 @@ val QuoteStyle by ComponentStyle {
 val SubQuoteStyle by ComponentStyle {
     base {
         Modifier
-            .margin() // Added top padding
             .padding(left = 20.px) // Added left padding
             .maxWidth(500.px)
             .fontFamily(FONT_FAMILY)

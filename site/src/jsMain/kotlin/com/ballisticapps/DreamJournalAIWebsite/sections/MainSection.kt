@@ -55,7 +55,8 @@ fun MainSection() {
         ) {
             QuoteSection(
                 quote = "Dream analysis made easy",
-                subQuote = "Dream Journal AI is a free, open-source, and privacy-focused dream journal app that uses AI to help you understand your dreams."
+                subQuote = "An AI-powered dream journal application that helps users record," +
+                        " analyze, and explore their dreams to gain insights into patterns, themes, and emotions."
             )
         }
         Spacer()
@@ -75,23 +76,24 @@ fun QuoteSection(quote: String, subQuote: String) {
     val breakpoint = rememberBreakpoint()
     Column(
     ) {
-        P(attrs = QuoteStyle.toModifier().maxWidth(
-            if (breakpoint >= Breakpoint.MD) 100.percent
-            else 90.percent
-        ).fontSize(
-            if (breakpoint >= Breakpoint.MD) 40.px
-            else 24.px
-        ).toAttrs()
+        P(
+            attrs = QuoteStyle.toModifier().maxWidth(
+                90.percent
+            ).fontSize(
+                if (breakpoint >= Breakpoint.MD) 40.px
+                else 28.px
+            ).toAttrs()
         ) {
             Text(quote)
         }
-        P(attrs = SubQuoteStyle.toModifier().maxWidth(
-            if (breakpoint >= Breakpoint.MD) 60.percent
-            else 80.percent
-        ).fontSize(
-            if (breakpoint >= Breakpoint.MD) 26.px
-            else 16.px
-        ).toAttrs()
+        P(
+            attrs = SubQuoteStyle.toModifier().maxWidth(
+                if (breakpoint >= Breakpoint.MD) 60.percent
+                else 90.percent
+            ).fontSize(
+                if (breakpoint >= Breakpoint.MD) 26.px
+                else 20.px
+            ).toAttrs()
         ) {
             Text(subQuote)
         }
@@ -100,7 +102,7 @@ fun QuoteSection(quote: String, subQuote: String) {
 
 
 @Composable
-fun PrivatePolicyLink(){
+fun PrivatePolicyLink() {
     Link(
         path = "privacy-policy",
         text = "Privacy Policy",
@@ -126,6 +128,7 @@ fun LogoSection() {
     }
 
 }
+
 @Composable
 fun HeaderSection(
 
